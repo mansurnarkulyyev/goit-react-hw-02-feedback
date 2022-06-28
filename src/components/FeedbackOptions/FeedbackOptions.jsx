@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
 
-import st from 'components/FeedbackOptions/FeedbackOptions.module.css';
+import st from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onBtnClick }) => (
     <div>

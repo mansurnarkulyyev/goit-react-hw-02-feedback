@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import st from 'components/Section/Section';
+import st from './Section';
 
 const Section = ({title, children})=>(
 <div className={st.Container}>
