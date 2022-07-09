@@ -5,21 +5,21 @@ import Statistics from "components/Statistics/Statistics";
 import Notification from "components/Notification/Notification.jsx";
 
 
-export class  App extends React.Component {
-  state={
-    good:0,
-    neutral:0,
-    bad:0,
+export class App extends React.Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
   };
 
-  onBtnClick = feedback =>{
-    this.setState(prevSate =>({
-      [feedback]:prevSate[feedback] + 1,
+  onBtnClick = feedback => {
+    this.setState(prevSate => ({
+      [feedback]: prevSate[feedback] + 1,
     }));
   };
 
 
-  countTotalFeedback ()  {
+  countTotalFeedback() {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
   };
@@ -30,9 +30,10 @@ export class  App extends React.Component {
     return Math.round((good * 100) / total);
   };
 
+
   render() {
     const { good, neutral, bad } = this.state;
-const total = this.countTotalFeedback()
+    const total = this.countTotalFeedback()
 
     return (
       <div>
@@ -51,10 +52,10 @@ const total = this.countTotalFeedback()
               total={total}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
-          ) : 
-          (
-            <Notification message="There is no feedback" />
-          )
+          ) :
+            (
+              <Notification message="There is no feedback" />
+            )
           }
         </Section>
       </div>
