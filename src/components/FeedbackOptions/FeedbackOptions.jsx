@@ -14,7 +14,11 @@ const FeedbackOptions = ({ options, onBtnClick }) => (
 );
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.array.isRequired,
+  options: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
   onBtnClick: PropTypes.func.isRequired,
 };
 
